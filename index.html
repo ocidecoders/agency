@@ -3,99 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocide Coders — Premium Websites & Apps</title>
+    <title>Ocide Coders | Premium Websites & Apps from $1</title>
+    <meta name="description" content="Ocide Coders builds premium, handcrafted websites and web apps. Clean code. Fast delivery. Starting at just $1.">
+    <meta property="og:title" content="Ocide Coders | Premium Websites & Apps">
+    <meta property="og:description" content="Handcrafted websites starting at $1. Real code, real results.">
+    <meta name="theme-color" content="#0a0a0f">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">Ocide Coders</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#work">Work</a>
-            <a href="#services">Services</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact" class="btn-nav">Hire Us</a>
-        </nav>
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span><span></span><span></span>
+
+    <!-- HEADER -->
+    <header class="site-header" id="header">
+        <div class="container header-inner">
+            <a href="#home" class="logo">
+                <span class="logo-mark">◆</span> Ocide Coders
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#work">Work</a>
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact" class="nav-cta">Hire Us</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>We Build Premium <span class="highlight">Digital Experiences</span></h1>
-            <p>Websites & Apps starting at just <strong>$1</strong>. Pure HTML, CSS, and JS.</p>
-            <a href="#pricing" class="btn-primary">Get Your $1 Site</a>
-        </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section id="work" class="portfolio">
-        <h2>Our Work Speaks</h2>
-        <p class="subtitle">A glimpse of our latest project — Sybil Kailena</p>
-        
-        <div class="project-showcase">
-            <div class="project-header">
-                <h3>Sybil Kailena</h3>
-                <p>Personal Brand & Portfolio Website</p>
-                <a href="https://sybil-kailena.onrender.com" target="_blank" class="btn-secondary">View Live Site</a>
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="container hero-inner">
+            <div class="hero-badge">
+                <span class="dot"></span> Accepting new projects
             </div>
-            
-            <!-- Premium Grid Layout -->
-            <div class="project-gallery-grid">
-                <img src="https://i.ibb.co.com/GySrkJt/Screenshot-20261013-020534-Chrome.jpg" alt="Sybil Work 1">
-                <img src="https://i.ibb.co.com/CsNFfpbp/Screenshot-20261013-020530-Chrome.jpg" alt="Sybil Work 2">
-                <img src="https://i.ibb.co.com/Y46c9WHd/Screenshot-20261013-020524-Chrome.jpg" alt="Sybil Work 3">
-                <img src="https://i.ibb.co.com/1G8GTZ5c/Screenshot-20261013-020517-Chrome.jpg" alt="Sybil Work 4">
-                <img src="https://i.ibb.co.com/QFjVzLzf/Screenshot-20261013-020506-Chrome.jpg" alt="Sybil Work 5">
-                <img src="https://i.ibb.co.com/qFFg06PD/Screenshot-20261013-020458-Chrome.jpg" alt="Sybil Work 6">
+            <h1 class="hero-title">
+                We Build Premium<br>
+                <span class="gradient-text">Digital Experiences</span>
+            </h1>
+            <p class="hero-sub">
+                Handcrafted websites & web apps. Pure HTML, CSS, JavaScript.<br>
+                Starting at just <strong class="gold">$1</strong> — because great work speaks louder than price tags.
+            </p>
+            <div class="hero-actions">
+                <a href="#pricing" class="btn btn-primary">Get Your $1 Site →</a>
+                <a href="#work" class="btn btn-ghost">See Our Work</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="services">
-        <h2>What We Do</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>Web Development</h3>
-                <p>Portfolios, Landing Pages, and Business Sites.</p>
-            </div>
-            <div class="service-card">
-                <h3>App Development</h3>
-                <p>Mobile-first web applications and tools.</p>
-            </div>
-            <div class="service-card">
-                <h3>UI/UX Design</h3>
-                <p>Clean, modern, and user-friendly interfaces.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span>
+                    <span class="stat-lbl">Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-target="24">0</span><span class="stat-plus">h</span>
+                    <span class="stat-lbl">Delivery</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+                    <span class="stat-lbl">Satisfaction</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="pricing">
-        <h2>The $1 Offer</h2>
-        <div class="price-card">
-            <h3>Starter Portfolio</h3>
-            <div class="price">$1</div>
-            <ul>
-                <li>1 Page Website</li>
-                <li>3 Sections</li>
-                <li>Mobile Responsive</li>
-                <li>1 Revision</li>
-                <li>24-48h Delivery</li>
-            </ul>
-            <a href="mailto:ocidecoders@proton.me?subject=Order%20$1%20Portfolio&body=Hi%20Ocide%20Coders,%0A%0AI%20want%20to%20order%20a%20$1%20portfolio.%0A%0AMy%20Name:%20[Your%20Name]%0ARequirements:%20[Describe%20your%20idea]%0A%0AThanks!" class="btn-primary">Order for $1</a>
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>WEB DEVELOPMENT</span><span>◆</span>
+            <span>UI / UX DESIGN</span><span>◆</span>
+            <span>WEB APPS</span><span>◆</span>
+            <span>SEO</span><span>◆</span>
+            <span>LANDING PAGES</span><span>◆</span>
+            <span>PORTFOLIOS</span><span>◆</span>
+            <span>WEB DEVELOPMENT</span><span>◆</span>
+            <span>UI / UX DESIGN</span><span>◆</span>
+            <span>WEB APPS</span><span>◆</span>
+            <span>SEO</span><span>◆</span>
+            <span>LANDING PAGES</span><span>◆</span>
+            <span>PORTFOLIOS</span><span>◆</span>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <section class="section portfolio" id="work">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">Portfolio</span>
+                <h2>Our Work Speaks</h2>
+                <p class="section-sub">Real projects. Real clients. Real code.</p>
+            </div>
+
+            <div class="featured-project reveal">
+                <div class="project-info">
+                    <span class="project-cat">Featured Project</span>
+                    <h3>Sybil Kailena</h3>
+                    <p>Personal brand & portfolio website for a Ukrainian glamour model — built with pure HTML/CSS/JS, custom SEO, dynamic galleries, and a private members section.</p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>SEO</span>
+                    </div>
+                    <a href="https://sybil-kailena.onrender.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                        View Live Site →
+                    </a>
+                </div>
+                <div class="project-preview">
+                    <div class="preview-frame">
+                        <div class="preview-bar">
+                            <span></span><span></span><span></span>
+                            <span class="preview-url">sybil-kailena.onrender.com</span>
+                        </div>
+                        <div class="preview-body">
+                            <img src="https://i.ibb.co.com/GySrkJt/Screenshot-20261013-020534-Chrome.jpg" alt="Sybil Kailena Homepage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-gallery reveal">
+                <img src="https://i.ibb.co.com/CsNFfpbp/Screenshot-20261013-020530-Chrome.jpg" alt="Sybil Kailena">
+                <img src="https://i.ibb.co.com/Y46c9WHd/Screenshot-20261013-020524-Chrome.jpg" alt="Sybil Kailena">
+                <img src="https://i.ibb.co.com/1G8GTZ5c/Screenshot-20261013-020517-Chrome.jpg" alt="Sybil Kailena">
+                <img src="https://i.ibb.co.com/QFjVzLzf/Screenshot-20261013-020506-Chrome.jpg" alt="Sybil Kailena">
+                <img src="https://i.ibb.co.com/qFFg06PD/Screenshot-20261013-020458-Chrome.jpg" alt="Sybil Kailena">
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <p>Powered by <strong>Ocide Coders</strong> — A part of Ocide</p>
-        <p>Contact: <a href="mailto:ocidecoders@proton.me">ocidecoders@proton.me</a></p>
-        <p>© 2026 Ocide Coders. All rights reserved.</p>
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">What We Do</span>
+                <h2>Services That Deliver</h2>
+                <p class="section-sub">Built by developers. Designed for humans.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">◈</div>
+                    <h3>Web Development</h3>
+                    <p>Portfolios, landing pages, business sites — pixel-perfect and lightning fast.</p>
+                    <ul>
+                        <li>Responsive design</li>
+                        <li>SEO-ready</li>
+                        <li>Performance optimized</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">◇</div>
+                    <h3>Web Applications</h3>
+                    <p>Mobile-first web apps with clean UI — from concept to launch.</p>
+                    <ul>
+                        <li>Interactive UI</li>
+                        <li>API integration</li>
+                        <li>Real-time features</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">◆</div>
+                    <h3>UI / UX Design</h3>
+                    <p>Clean interfaces that feel intuitive and look premium.</p>
+                    <ul>
+                        <li>Wireframes</li>
+                        <li>Design systems</li>
+                        <li>Prototyping</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">▣</div>
+                    <h3>SEO & Growth</h3>
+                    <p>Get found on Google. Schema, sitemaps, meta tags — done right.</p>
+                    <ul>
+                        <li>On-page SEO</li>
+                        <li>Search Console setup</li>
+                        <li>Analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process" id="process">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">How It Works</span>
+                <h2>Our Process</h2>
+                <p class="section-sub">Simple. Transparent. Fast.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step reveal">
+                    <span class="step-num">01</span>
+                    <h3>You Tell Us</h3>
+                    <p>Share your idea, references, and requirements. Email is enough.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="step-num">02</span>
+                    <h3>We Design</h3>
+                    <p>A tailored design concept — mobile-first, clean, and modern.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="step-num">03</span>
+                    <h3>We Build</h3>
+                    <p>Real code. Fast delivery. Every line crafted with care.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="step-num">04</span>
+                    <h3>You Launch</h3>
+                    <p>We deploy it, you own it. One free revision included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">Pricing</span>
+                <h2>Simple, Honest Pricing</h2>
+                <p class="section-sub">No hidden fees. No surprises. Just results.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="price-card reveal">
+                    <div class="price-badge">Starter</div>
+                    <h3>Landing Page</h3>
+                    <div class="price-amount"><span class="currency">$</span>1</div>
+                    <p class="price-desc">Perfect for testing us out.</p>
+                    <ul>
+                        <li>1 Page Website</li>
+                        <li>3 Sections</li>
+                        <li>Mobile Responsive</li>
+                        <li>24-48h Delivery</li>
+                        <li>1 Revision</li>
+                    </ul>
+                    <a href="mailto:ocidecoders@proton.me?subject=Order: $1 Starter&body=Hi Ocide Coders,%0A%0AI want to order the $1 Starter package.%0A%0AName: [Your Name]%0ARequirements: [Describe your idea]%0A%0AThanks!" class="btn btn-ghost btn-full">Order for $1</a>
+                </div>
+
+                <div class="price-card price-card-featured reveal">
+                    <div class="price-badge price-badge-gold">Most Popular</div>
+                    <h3>Business</h3>
+                    <div class="price-amount"><span class="currency">$</span>10</div>
+                    <p class="price-desc">For serious personal brands.</p>
+                    <ul>
+                        <li>3-5 Pages</li>
+                        <li>Custom Design</li>
+                        <li>SEO Setup</li>
+                        <li>Contact Form</li>
+                        <li>3 Revisions</li>
+                        <li>Free 1-month support</li>
+                    </ul>
+                    <a href="mailto:ocidecoders@proton.me?subject=Order: $10 Business&body=Hi Ocide Coders,%0A%0AI want to order the $10 Business package.%0A%0AName: [Your Name]%0ARequirements: [Describe your project]%0A%0AThanks!" class="btn btn-primary btn-full">Order for $10</a>
+                </div>
+
+                <div class="price-card reveal">
+                    <div class="price-badge">Custom</div>
+                    <h3>Enterprise</h3>
+                    <div class="price-amount price-amount-custom">Let's Talk</div>
+                    <p class="price-desc">For complex projects.</p>
+                    <ul>
+                        <li>Unlimited Pages</li>
+                        <li>Web App Features</li>
+                        <li>API Integration</li>
+                        <li>Priority Support</li>
+                        <li>Ongoing Maintenance</li>
+                    </ul>
+                    <a href="mailto:ocidecoders@proton.me?subject=Custom Project Inquiry&body=Hi Ocide Coders,%0A%0AI have a custom project.%0A%0AName: [Your Name]%0AProject details: [Describe]%0ABudget: [Your budget]%0A%0AThanks!" class="btn btn-ghost btn-full">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
+    <section class="section cta-section" id="contact">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2>Ready to Build Something Great?</h2>
+                <p>Send us your idea. Get a reply within 24 hours.</p>
+                <a href="mailto:ocidecoders@proton.me?subject=New Project Inquiry&body=Hi Ocide Coders,%0A%0AI want to build something.%0A%0AName: [Your Name]%0AIdea: [Describe]%0ABudget: [Optional]%0A%0AThanks!" class="btn btn-primary">Start a Project →</a>
+                <p class="cta-email">or email us at <a href="mailto:ocidecoders@proton.me">ocidecoders@proton.me</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-mark">◆</span> Ocide Coders
+                </a>
+                <p>A part of Ocide. Building the web, one line at a time.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <a href="#work">Work</a>
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <a href="mailto:ocidecoders@proton.me">ocidecoders@proton.me</a>
+                <a href="https://github.com/ocidecoders" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 Ocide Coders. All rights reserved.</p>
+            <p>Crafted with care. Deployed with pride.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

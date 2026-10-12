@@ -1,45 +1,86 @@
-// Mobile Menu Toggle
-const mobileMenu = document.getElementById('mobile-menu');
-const nav = document.querySelector('nav');
+document.addEventListener('DOMContentLoaded', () => {
 
-mobileMenu.addEventListener('click', () => {
-    nav.classList.toggle('active');
-});
+    // ===== HEADER SCROLL =====
+    const header = document.getElementById('header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+    }
 
-// Close mobile menu when a link is clicked
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        nav.classList.remove('active');
-    });
-});
+    // ===== MOBILE MENU =====
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+    }
 
-// Smooth Scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    // ===== REVEAL ON SCROLL =====
+    const reveals = document.querySelectorAll('.reveal');
+    if (reveals.length && 'IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(el => revealObserver.observe(el));
+    } else {
+        reveals.forEach(el => el.classList.add('visible'));
+    }
+
+    // ===== STAT COUNTER =====
+    const statNums = document.querySelectorAll('.stat-num');
+    if (statNums.length && 'IntersectionObserver' in window) {
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-target'), 10);
+                    animateCounter(el, target);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        statNums.forEach(el => counterObserver.observe(el));
+    }
+
+    function animateCounter(el, target) {
+        const duration = 1600;
+        const start = performance.now();
+        function step(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.floor(eased * target);
+            if (progress < 1) requestAnimationFrame(step);
+            else el.textContent = target;
+        }
+        requestAnimationFrame(step);
+    }
+
+    // ===== SMOOTH SCROLL (fallback for older browsers) =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href.length < 2) return;
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     });
-});
 
-// Simple Scroll Reveal Animation for Portfolio Grid Images
-const observerOptions = {
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.project-gallery-grid img, .service-card, .price-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(el);
 });
