@@ -23,7 +23,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Simple Scroll Reveal Animation
+// Simple Scroll Reveal Animation for Portfolio Grid Images
 const observerOptions = {
     threshold: 0.1
 };
@@ -37,7 +37,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.project-card, .service-card, .price-card').forEach(el => {
+document.querySelectorAll('.project-gallery-grid img, .service-card, .price-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
