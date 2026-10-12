@@ -1087,3 +1087,19 @@ section { padding: 100px 0; position: relative; }
         height: 400px;
     }
 }
+
+/* ===== PREVIEW GRID — show full images, no cropping ===== */
+.preview-item {
+    height: auto;
+    background: var(--bg);
+}
+.preview-item img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: top;
+}
+.preview-item:hover img {
+    transform: none;
+}
