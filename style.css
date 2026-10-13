@@ -1103,3 +1103,40 @@ section { padding: 100px 0; position: relative; }
 .preview-item:hover img {
     transform: none;
 }
+
+/* ===== PREVIEW GRID — FORCE FULL IMAGES (final override) ===== */
+section.work .preview-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 18px !important;
+    align-items: start !important;
+}
+section.work .preview-grid .preview-item {
+    height: auto !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    background: #0c0c14 !important;
+    border: 1px solid var(--border) !important;
+}
+section.work .preview-grid .preview-item img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: top !important;
+    transform: none !important;
+}
+section.work .preview-grid .preview-item:hover img {
+    transform: none !important;
+}
+section.work .preview-grid .preview-item::after {
+    display: none !important;
+}
+
+@media (max-width: 900px) {
+    section.work .preview-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+}
