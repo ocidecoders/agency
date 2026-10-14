@@ -1,32 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Header scroll
-    const header = document.getElementById('header');
+    // Header scroll effect
+    const header = document.querySelector('.site-header');
     if (header) {
         const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
     }
 
-    // Mobile menu
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('nav');
-    if (burger && nav) {
-        burger.addEventListener('click', () => {
-            burger.classList.toggle('active');
-            nav.classList.toggle('active');
-        });
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                burger.classList.remove('active');
-                nav.classList.remove('active');
-            });
-        });
-    }
-
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    if (reveals.length && 'IntersectionObserver' in window) {
+    // Scroll reveal
+    const revealTargets = document.querySelectorAll(
+        '.section-head, .project-card, .contact-text, .contact-action, .hero-eyebrow, .hero h1, .hero-lead, .hero-meta'
+    );
+    if (revealTargets.length && 'IntersectionObserver' in window) {
+        revealTargets.forEach(el => el.classList.add('reveal-init'));
         const obs = new IntersectionObserver((entries) => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
@@ -34,15 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     obs.unobserve(e.target);
                 }
             });
-        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-        reveals.forEach(el => obs.observe(el));
-    } else {
-        reveals.forEach(el => el.classList.add('visible'));
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        revealTargets.forEach(el => obs.observe(el));
     }
 
-    // Smooth scroll
+    // Smooth anchor scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', function(e) {
+        a.addEventListener('click', function (e) {
             const id = this.getAttribute('href');
             if (id.length < 2) return;
             const t = document.querySelector(id);
