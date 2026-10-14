@@ -663,3 +663,62 @@ body {
 /* ===== FONT LOADING OPTIMIZATION ===== */
 html { font-display: swap; }
 body { font-display: swap; }
+
+/* ===================================================================
+   CLAIMS — Why Ocide Coders
+   =================================================================== */
+.claims {
+    padding: 100px 0;
+    background: var(--cream-soft);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+.claims-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.claim-card {
+    background: var(--cream);
+    padding: 44px 32px;
+    position: relative;
+    transition: background 0.4s ease;
+}
+.claim-card:hover {
+    background: var(--cream-soft);
+}
+.claim-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--terracotta);
+    display: block;
+    margin-bottom: 22px;
+    opacity: 0.8;
+}
+.claim-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+.claim-card p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+@media (max-width: 900px) {
+    .claims { padding: 70px 0; }
+    .claims-grid { grid-template-columns: repeat(2, 1fr); }
+    .claim-card { padding: 32px 24px; }
+}
+@media (max-width: 550px) {
+    .claims-grid { grid-template-columns: 1fr; }
+}
