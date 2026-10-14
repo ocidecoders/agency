@@ -632,3 +632,30 @@ body {
     .article-body { padding: 20px 0 60px; }
     .article-body p, .article-body li { font-size: 16px; }
 }
+
+/* ===================================================================
+   BANGLA TYPOGRAPHY (for blog articles)
+   =================================================================== */
+.article-back {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 32px;
+    transition: color 0.3s ease;
+}
+.article-back:hover { color: var(--terracotta); }
+
+/* When the article body has lang="bn" content,
+   use Hind Siliguri for cleaner Bangla */
+.article-body p,
+.article-body li,
+.article-body blockquote {
+    font-family: 'Jost', 'Hind Siliguri', sans-serif;
+}
+.article-body strong {
+    color: var(--ink);
+    font-weight: 600;
+}
