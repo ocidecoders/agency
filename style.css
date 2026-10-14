@@ -659,3 +659,7 @@ body {
     color: var(--ink);
     font-weight: 600;
 }
+
+/* ===== FONT LOADING OPTIMIZATION ===== */
+html { font-display: swap; }
+body { font-display: swap; }
