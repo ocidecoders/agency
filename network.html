@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ocide Network — Connected Web Ecosystems</title>
+  <meta name="description" content="Don't just build a website. Build an empire. Get interconnected multi-site networks that cross-promote each other for maximum SEO and brand power.">
+  <meta name="keywords" content="linked websites, multi-site network, web ecosystem, Ocide Coders network, SEO linked sites, business website package">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F9F8F6">
+
+  <link rel="canonical" href="https://ocidecoders.onrender.com/network.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* UNIFIED LIGHT THEME (With Deep Purple Accent for Network) */
+    :root {
+      --bg: #F9F8F6; --surface: #FFFFFF; --text: #0A0A0A;
+      --text-muted: #555555; --line: #E5E3DC;
+      --accent: #7C3AED; /* Deep Purple for Network */
+      --accent-hover: #6D28D9;
+      --font-display: 'Archivo', sans-serif; --font-body: 'Inter', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .icon { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; flex-shrink: 0; }
+
+    /* Navbar */
+    .nav-minimal { padding: 20px 40px; border-bottom: 1px solid var(--line); background: var(--surface); display: flex; align-items: center; }
+    .nav-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--text); }
+    .nav-link:hover { color: var(--accent); text-decoration: none; }
+    
+    /* Layout */
+    .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+    .page-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 2px solid var(--text); }
+    .page-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 12px; color: var(--accent); }
+    .subtitle { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); }
+    .subtitle::before { content: ""; display: block; width: 30px; height: 2px; background: var(--accent); }
+
+    /* Content */
+    .content p.lead { font-size: 1.2rem; color: var(--text); font-weight: 500; margin-bottom: 30px; }
+    .content p { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px; }
+    .content strong { color: var(--text); font-weight: 600; }
+    
+    /* Network Diagram (Visual) */
+    .network-diagram {
+      display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;
+      margin: 40px 0; padding: 30px; background: var(--surface); border: 1px dashed var(--line); border-radius: 12px;
+    }
+    .node {
+      background: var(--bg); border: 1px solid var(--line); padding: 16px 24px; border-radius: 8px;
+      font-family: var(--font-display); font-weight: 700; color: var(--text); text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05); position: relative;
+    }
+    .node.central { background: var(--accent); color: #FFF; border-color: var(--accent); }
+    .node-line { height: 2px; width: 40px; background: var(--line); display: none; }
+    @media (min-width: 600px) {
+      .node-line { display: block; }
+    }
+
+    /* CTA Box */
+    .cta-box { background: #0A0A0A; color: white; padding: 40px; border-radius: 12px; text-align: center; margin: 50px 0; }
+    .cta-box h2 { font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 16px; color: white; }
+    .cta-box p { color: #A0A0A0; margin-bottom: 24px; font-size: 1.1rem; }
+    .btn-primary { background: var(--accent); color: white; padding: 16px 32px; border-radius: 4px; font-family: var(--font-display); font-weight: 700; font-size: 1rem; display: inline-block; transition: 0.2s; }
+    .btn-primary:hover { background: var(--accent-hover); text-decoration: none; transform: translateY(-2px); }
+
+    /* Pricing Table */
+    .pricing-table { width: 100%; border-collapse: collapse; margin: 30px 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    .pricing-table th, .pricing-table td { padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--line); }
+    .pricing-table th { background: var(--bg); font-family: var(--font-display); font-weight: 800; color: var(--text); }
+    .pricing-table tr:last-child td { border-bottom: none; }
+    .pricing-table .highlight-row td { background: rgba(124, 58, 237, 0.05); font-weight: 600; }
+
+    @media (max-width: 600px) { .nav-minimal { padding: 16px 20px; } .cta-box { padding: 30px 20px; } .pricing-table th, .pricing-table td { padding: 12px; font-size: 0.9rem; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-minimal">
+    <a href="index.html" class="nav-link">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Back to Ocide Coders
+    </a>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>The Ocide Network</h1>
+      <div class="subtitle">Connected Web Ecosystems</div>
+    </div>
+
+    <div class="content">
+      <p class="lead">Most people buy a website and treat it like an isolated island. But the smartest creators and businesses build <strong>networks</strong>.</p>
+      
+      <p>Instead of building two completely separate, unlinked websites, we build <strong>The Ocide Network</strong> for you. We create multiple sites (like a personal portfolio, a business landing page, or a product site) and connect them together.</p>
+
+      <!-- Visual Diagram -->
+      <div class="network-diagram">
+        <div class="node">Portfolio Site</div>
+        <div class="node-line"></div>
+        <div class="node central">Linked Ecosystem</div>
+        <div class="node-line"></div>
+        <div class="node">Business Site</div>
+      </div>
+
+      <h2>Why is a Linked Network better?</h2>
+      <ul>
+        <li><strong>SEO Boost:</strong> When two authoritative sites link to each other, Google ranks <em>both</em> of them higher. It's called cross-domain linking.</li>
+        <li><strong>Cross-Promotion:</strong> Visitors on your portfolio can easily jump to your business site, and vice versa.</li>
+        <li><strong>Complete Branding:</strong> You own the entire digital space for your name or brand.</li>
+      </ul>
+
+      <h2>The "Network Bundle" Pricing</h2>
+      <p>If you buy two separate premium sites from us, it costs more. But with our Network Bundle, you get them fully connected, SEO-optimized, and cross-linked at a massive discount.</p>
+
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Package</th>
+            <th>What you get</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Single Premium Site</td>
+            <td>1 Site + Domain + Backend</td>
+            <td>$44</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>Ocide Network (2 Sites)</td>
+            <td>2 Fully Linked Sites + 1 Custom .me Domain + Cross-SEO setup</td>
+            <td>$69 <br><small>(Save $19)</small></td>
+          </tr>
+          <tr>
+            <td>Ocide Network (3 Sites)</td>
+            <td>3 Linked Sites (e.g., Portfolio + Business + Eliget setup) + 2 Domains</td>
+            <td>$99 <br><small>(Save $33+)</small></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>When you buy a Network, you are not just buying websites. You are buying a digital real estate portfolio that works for you 24/7.</p>
+
+      <!-- CTA Section -->
+      <div class="cta-box">
+        <h2>Ready to build your empire?</h2>
+        <p>Let's connect your digital presence. Contact us to discuss your custom Network bundle.</p>
+        <a href="index.html#contact" class="btn-primary">Contact Us</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Hidden SEO Internal Links -->
+  <div style="font-size: 0.65rem; opacity: 0.25; text-align: center; padding: 20px; border-top: 1px solid rgba(0,0,0,0.1); margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 10px; font-family: sans-serif; color: #000;">
+    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+      <a href="index.html" style="color: inherit; text-decoration: none;">Home</a>
+      <a href="ocide-about.html" style="color: inherit; text-decoration: none;">About Ocide Coders</a>
+      <a href="aboutmustafa.html" style="color: inherit; text-decoration: none;">About Abdullah Al Mustafa</a>
+      <a href="free-website.html" style="color: inherit; text-decoration: none;">Get a Free Website</a>
+      <a href="meeel.html" style="color: inherit; text-decoration: none;">meeEL</a>
+      <a href="eliget.html" style="color: inherit; text-decoration: none;">Eliget</a>
+      <a href="earn-money-online.html" style="color: inherit; text-decoration: none;">Earn Money</a>
+      <a href="blog-freelancer-portfolio.html" style="color: inherit; text-decoration: none;">Freelancer Guide</a>
+      <a href="network.html" style="color: inherit; text-decoration: none;">Network</a>
+      <a href="blog-free-ai-website.html" style="color: inherit; text-decoration: none;">AI Website Guide</a>
+      <a href="blog-truth-about-free-websites.html" style="color: inherit; text-decoration: none;">Truth About Free Sites</a>
+      <a href="sitemap.html" style="color: inherit; text-decoration: none;">Sitemap</a>
+      <a href="https://abdullahalmustafa.onrender.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Abdullah Al Mustafa</a>
+    </div>
+    <div>© 2026 Ocide Coders</div>
+  </div>
+
+</body>
+</html>
