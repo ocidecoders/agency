@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Find Freelance Clients Easily — Ocide Coders</title>
+  <meta name="description" content="Struggling to find clients on Upwork or Fiverr? Join the exclusive freelancer community on Eliget and get direct access to clients without endless bidding.">
+  <meta name="keywords" content="find freelance clients, upwork alternative, fiverr alternative, freelancer community, get clients online, Eliget freelance">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F9F8F6">
+
+  <link rel="canonical" href="https://ocidecoders.onrender.com/get-clients.html">
+  
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* UNIFIED EDITORIAL THEME */
+    :root {
+      --bg: #F9F8F6; --surface: #FFFFFF; --text: #0A0A0A;
+      --text-muted: #555555; --line: #E5E3DC;
+      --accent: #FF3B1F; --accent-hover: #D12A13;
+      --green: #10B981; /* Eliget Accent */
+      --font-display: 'Archivo', sans-serif; --font-body: 'Inter', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; -webkit-font-smoothing: antialiased; -webkit-user-select: none; user-select: none; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .icon { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; flex-shrink: 0; }
+
+    /* Navbar */
+    .nav-minimal { padding: 20px 40px; border-bottom: 1px solid var(--line); background: var(--surface); display: flex; align-items: center; }
+    .nav-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--text); transition: color 0.2s; }
+    .nav-link:hover { color: var(--accent); text-decoration: none; }
+    
+    /* Layout */
+    .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+    .page-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 2px solid var(--text); text-align: center; }
+    .page-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 16px; }
+    .page-header h1 span { color: var(--green); }
+    .subtitle { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); }
+    .subtitle::before, .subtitle::after { content: ""; display: block; width: 20px; height: 2px; background: var(--accent); }
+
+    .intro-text { font-size: 1.15rem; color: var(--text-muted); text-align: center; max-width: 750px; margin: 0 auto 50px; }
+
+    /* Steps Grid */
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-bottom: 50px; }
+    .step-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 32px 24px; text-align: center; position: relative; transition: transform 0.3s, box-shadow 0.3s; }
+    .step-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.05); border-color: var(--green); }
+    
+    .step-icon { width: 64px; height: 64px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; color: var(--green); }
+    .step-icon svg { width: 28px; height: 28px; stroke-width: 2; }
+    
+    .step-card h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; color: var(--text); }
+    .step-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* Highlight Box */
+    .highlight-box { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--green); border-radius: 8px; padding: 30px; margin: 40px 0; text-align: center; }
+    .highlight-box h2 { font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 12px; color: var(--text); }
+    .highlight-box p { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+
+    /* Buttons */
+    .button-group { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 36px; border-radius: 4px; font-family: var(--font-display); font-weight: 700; font-size: 1rem; transition: all 0.2s; }
+    .btn-primary { background: var(--green); color: #FFF; border: 1px solid var(--green); }
+    .btn-primary:hover { background: #059669; border-color: #059669; text-decoration: none; transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--line); }
+    .btn-outline:hover { border-color: var(--text); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .nav-minimal { padding: 16px 20px; }
+      .btn { width: 100%; justify-content: center; }
+      .button-group { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-minimal">
+    <a href="index.html" class="nav-link">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Back to Ocide Coders
+    </a>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Stop Bidding. Start <span>Working.</span></h1>
+      <div class="subtitle">The Freelancer Community</div>
+    </div>
+
+    <p class="intro-text">Are you tired of sending 50 proposals on Upwork with no replies? Or competing with thousands of people on social media? It's time to change the game.</p>
+
+    <div class="steps-grid">
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <h3>1. Join the Hub</h3>
+        <p>Create your profile on <strong>Eliget</strong> and join our dedicated freelancer community. It's free and takes 2 minutes.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h3>2. Show Your Work</h3>
+        <p>Share your portfolio, skills, and services. Since Eliget has <strong>no algorithms</strong>, clients actually see your posts.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        </div>
+        <h3>3. Connect Directly</h3>
+        <p>Get direct messages from clients who need your specific skills. No bidding wars, no connects, no middleman fees.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h2>Why Eliget is different?</h2>
+      <p>On other platforms, you are competing with 10,000 people. On Eliget, you are competing with 10. It's a focused community where <strong>real clients and real freelancers</strong> connect without endless scrolling or secret algorithms.</p>
+    </div>
+
+    <div class="button-group">
+      <a href="https://eliget.onrender.com/" target="_blank" rel="noopener" class="btn btn-primary">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        Join Eliget & Find Clients
+      </a>
+      <a href="index.html#works" class="btn btn-outline">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+        See Our Works
+      </a>
+    </div>
+  </div>
+
+  <!-- UNIFIED FOOTER -->
+  <footer class="footer" style="margin-top: 60px; padding: 30px 40px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; background: var(--surface);">
+    <p style="font-family: var(--font-display); font-size: 0.85rem; color: var(--text-muted);">© 2026 Ocide Coders</p>
+    <div style="display: flex; gap: 16px;">
+      <a href="https://youtube.com/@ocidecoders?si=P3a88e_AIgHM_LW6" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+      <a href="https://www.instagram.com/coders_ocide?obrf=Zmp6MmhpcXF6enR2" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=61595433153310" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="https://vm.tiktok.com/ZS9UuFXeQhahh-uFpKS/" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 15.68a6.34 6.34 0 0 0 6.34 6.32 6.34 6.34 0 0 0 6.33-6.32v-5a8.16 8.16 0 0 0 4.92 1.63v-3.5a8.23 8.23 0 0 1-3-1.12z"/></svg></a>
+      <a href="https://github.com/ocidecoders/" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+    </div>
+  </footer>
+
+  <!-- Hidden SEO Links -->
+  <div style="font-size: 0.65rem; opacity: 0.15; text-align: center; padding: 15px 20px; border-top: 1px solid var(--line); display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; font-family: sans-serif; color: #000; background: var(--bg);">
+    <a href="index.html" style="color: inherit; text-decoration: none;">Home</a>
+    <a href="ocide-about.html" style="color: inherit; text-decoration: none;">About Ocide</a>
+    <a href="aboutmustafa.html" style="color: inherit; text-decoration: none;">About Mustafa</a>
+    <a href="free-website.html" style="color: inherit; text-decoration: none;">Free Website</a>
+    <a href="meeel.html" style="color: inherit; text-decoration: none;">meeEL</a>
+    <a href="eliget.html" style="color: inherit; text-decoration: none;">Eliget</a>
+    <a href="earn-money-online.html" style="color: inherit; text-decoration: none;">Earn Money</a>
+    <a href="get-clients.html" style="color: inherit; text-decoration: none;">Get Clients</a>
+    <a href="blog-freelancer-portfolio.html" style="color: inherit; text-decoration: none;">Freelancer</a>
+    <a href="network.html" style="color: inherit; text-decoration: none;">Network</a>
+    <a href="templates.html" style="color: inherit; text-decoration: none;">Templates</a>
+    <a href="icons.html" style="color: inherit; text-decoration: none;">Icons</a>
+    <a href="blog-free-ai-website.html" style="color: inherit; text-decoration: none;">AI Guide</a>
+    <a href="blog-truth-about-free-websites.html" style="color: inherit; text-decoration: none;">Truth</a>
+    <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy</a>
+    <a href="terms.html" style="color: inherit; text-decoration: none;">Terms</a>
+    <a href="faq.html" style="color: inherit; text-decoration: none;">FAQ</a>
+    <a href="sitemap.html" style="color: inherit; text-decoration: none;">Sitemap</a>
+    <a href="https://abdullahalmustafa.onrender.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Abdullah Al Mustafa</a>
+  </div>
+
+</body>
+</html>
