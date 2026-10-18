@@ -36,52 +36,38 @@
   </script>
 
   <style>
-    /* =========================================
-       THEME: MEEEL (Bright Blue & Tech Dark)
-       ========================================= */
     :root {
-      --bg: #0A0A0A;
-      --surface: #121212;
-      --text: #FFFFFF;
-      --text-muted: #A0A0A0;
-      --line: #262626;
-      --accent: #0047FF; /* meeEL Blue */
+      --bg: #FFFFFF;
+      --surface: #FFFFFF;
+      --text: #111111;
+      --text-muted: #555555;
+      --line: #E5E7EB;
+      --accent: #0047FF;
       --accent-hover: #0035C4;
       --font-display: 'Archivo', sans-serif;
       --font-body: 'Inter', sans-serif;
       --font-mono: 'Fira Code', monospace;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: var(--font-body);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
+    body { background-color: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; -webkit-font-smoothing: antialiased; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-
-    /* SVG Icon Helpers */
-    .icon { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-
+    .icon { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; flex-shrink: 0; }
+    
     /* Navbar */
     .nav-minimal { padding: 20px 40px; border-bottom: 1px solid var(--line); background: var(--surface); display: flex; align-items: center; }
-    .nav-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text); }
+    .nav-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--text); }
     .nav-link:hover { color: var(--accent); text-decoration: none; }
     
     /* Layout */
     .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-    
-    /* Header */
     .page-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 2px solid var(--text); }
     .page-header h1 { font-family: var(--font-display); font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; line-height: 1; letter-spacing: -0.04em; margin-bottom: 12px; color: var(--accent); }
     .subtitle { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); }
     .subtitle::before { content: ""; display: block; width: 30px; height: 2px; background: var(--accent); }
 
     /* Infobox */
-    .infobox { float: right; width: 340px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; margin: 0 0 30px 40px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+    .infobox { float: right; width: 340px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; margin: 0 0 30px 40px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
     .infobox-header { display: flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
     .info-row { display: flex; margin-bottom: 14px; font-size: 0.9rem; align-items: flex-start; }
     .info-icon { width: 24px; height: 24px; color: var(--accent); margin-right: 12px; margin-top: 2px; }
@@ -96,10 +82,10 @@
     .content strong { color: var(--text); font-weight: 600; }
     
     /* Code Block */
-    .code-block { background: #000; border: 1px solid var(--line); border-radius: 8px; padding: 20px; margin: 24px 0; font-family: var(--font-mono); font-size: 0.95rem; color: #A0A0A0; }
-    .code-block span.keyword { color: #FF79C6; }
-    .code-block span.string { color: #F1FA8C; }
-    .code-block span.comment { color: #6272A4; }
+    .code-block { background: #F9FAFB; border: 1px solid var(--line); border-radius: 8px; padding: 20px; margin: 24px 0; font-family: var(--font-mono); font-size: 0.95rem; color: #333333; overflow-x: auto; }
+    .code-block span.keyword { color: #0047FF; font-weight: 600; }
+    .code-block span.string { color: #16A34A; }
+    .code-block span.comment { color: #9CA3AF; }
 
     /* Buttons */
     .button-group { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
@@ -108,12 +94,13 @@
     .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); text-decoration: none; transform: translateY(-2px); }
     .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--line); }
     .btn-outline:hover { border-color: var(--text); text-decoration: none; }
-
+    
     @media (max-width: 768px) {
       .infobox { float: none; width: 100%; margin: 0 0 30px 0; }
       .btn { width: 100%; justify-content: center; }
+      .nav-minimal { padding: 16px 20px; }
     }
-  </style>
+</style>
 </head>
 <body>
 
@@ -147,17 +134,17 @@
       </div>
       <div class="info-row">
         <svg class="icon info-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-        <div class="info-text"><span class="info-label">Creator</span><span class="info-value"><a href="aboutmustafa.html">Abdullah Al Mustafa</a></span></div>
+        <div class="info-text"><span class="info-label">Creator</span><span class="info-value"><a href="https://abdullahalmustafa.onrender.com/" target="_blank" rel="noopener">Abdullah Al Mustafa</a></span></div>
       </div>
     </div>
 
     <!-- Main Content -->
     <div class="content">
-      <p>As a child, <strong>Abdullah Al Mustafa</strong> asked a simple question: <em>"We build advanced machines, but why haven't we made coding languages easier?"</em></p>
-      <p>Since he couldn't build a whole new programming language from scratch, he built <strong>meeEL</strong>. What started as a simple alternative for HTML and CSS has now evolved into a powerful <strong>5-in-1 language engine</strong>.</p>
+      <p>As a child, <strong><a href="https://abdullahalmustafa.onrender.com/" target="_blank" rel="noopener">Abdullah Al Mustafa</a></strong> asked a simple question: <em>"We build advanced machines, but why haven't we made coding languages easier?"</em></p>
+      <p>Since he couldn't build a whole new programming language from scratch, he built <strong><a href="https://meeel-page.onrender.com/" target="_blank" rel="noopener">meeEL</a></strong>. What started as a simple alternative for HTML and CSS has now evolved into a powerful <strong>5-in-1 language engine</strong>.</p>
 
-      <h2><svg class="icon" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg> You Don't Need to be a Coder</h2>
-      <p>This is not an app for professional developers. This is for people who are <strong>not coders, but want to build</strong>. With meeEL, you don't have to learn complex syntax. You are the commander.</p>
+      <h2><svg class="icon" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg> You Don't Need to be a Coder</h2>
+      <p>This is not an app for professional developers. This is for people who are <strong>not coders, but want to build</strong>. With <a href="https://meeel-page.onrender.com/" target="_blank" rel="noopener">meeEL</a>, you don't have to learn complex syntax. You are the commander.</p>
       
       <p>You just give commands in plain English, and the engine does the magic. For example, if you write:</p>
 
@@ -171,8 +158,8 @@
 
       <p>Just like that, the engine sets the page name to "Home" behind the scenes. You don't write the code—you give the order.</p>
 
-      <h2><svg class="icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Code by Commanding, Not Typing</h2>
-      <p>meeEL understands your intent. It acts as a transpiler that reads your English instructions and instantly generates the underlying HTML, CSS, and JavaScript required to make it work.</p>
+      <h2><svg class="icon" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg> Code by Commanding, Not Typing</h2>
+      <p><a href="https://meeel-page.onrender.com/" target="_blank" rel="noopener">meeEL</a> understands your intent. It acts as a transpiler that reads your English instructions and instantly generates the underlying HTML, CSS, and JavaScript required to make it work.</p>
       <p>It removes the barrier to entry. If you have the vision, meeEL gives you the power to execute it.</p>
 
       <!-- Action Buttons -->
