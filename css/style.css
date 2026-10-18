@@ -612,3 +612,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     transform: none;
   }
 }
+
+/* Fix for Download Button as <button> element */
+button.btn-download {
+  width: 100%;
+  cursor: pointer;
+  font-family: var(--font-display);
+  background: var(--surface);
+}
