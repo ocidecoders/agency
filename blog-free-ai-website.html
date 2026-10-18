@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Build a Free Website Using AI (Step-by-Step)</title>
+  <meta name="description" content="Learn how to build a professional website for free using AI. Copy our secret prompt, generate HTML/CSS/JS, and host it on Netlify or GitHub Pages.">
+  <meta name="keywords" content="free website using AI, how to build a website for free, AI website prompt, free portfolio website, host website free netlify">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F9F8F6">
+
+  <link rel="canonical" href="https://ocidecoders.onrender.com/blog-free-ai-website.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* BLOG THEME (Light & Clean for Readability) */
+    :root {
+      --bg: #F9F8F6; --surface: #FFFFFF; --text: #0A0A0A;
+      --text-muted: #4A4A4A; --line: #E5E3DC;
+      --accent: #3B82F6; --accent-hover: #2563EB;
+      --font-display: 'Archivo', sans-serif; --font-body: 'Inter', sans-serif;
+      --font-mono: 'Fira Code', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .icon { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; flex-shrink: 0; }
+
+    /* Navbar */
+    .nav-minimal { padding: 20px 40px; border-bottom: 1px solid var(--line); background: var(--surface); display: flex; align-items: center; }
+    .nav-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--text); }
+    
+    /* Blog Container */
+    .container { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+    
+    /* Header */
+    .blog-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 2px solid var(--text); }
+    .blog-header h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .meta { display: flex; gap: 16px; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+    
+    /* Content Typography */
+    .content p { font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 24px; }
+    .content h2 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; margin: 40px 0 16px; }
+    .content h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin: 30px 0 12px; }
+    .content ul, .content ol { margin: 0 0 24px 24px; color: var(--text-muted); font-size: 1.05rem; }
+    .content li { margin-bottom: 10px; }
+    .content strong { color: var(--text); }
+
+    /* Prompt Box */
+    .prompt-box { background: #1E1E24; border-radius: 8px; margin: 30px 0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .prompt-header { background: #2D2D35; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; color: #A0A0A8; font-size: 0.85rem; font-family: var(--font-mono); }
+    .btn-copy { background: #3B82F6; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: 600; transition: 0.2s; }
+    .btn-copy:hover { background: #2563EB; }
+    .prompt-content { padding: 20px; color: #E0E0E6; font-family: var(--font-mono); font-size: 0.95rem; line-height: 1.6; white-space: pre-wrap; }
+
+    /* CTA Banner */
+    .cta-banner { background: linear-gradient(135deg, #3B82F6, #1E3A8A); border-radius: 12px; padding: 32px; text-align: center; color: white; margin: 50px 0; }
+    .cta-banner h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 12px; color: white; }
+    .cta-banner p { color: rgba(255,255,255,0.9); margin-bottom: 24px; font-size: 1.05rem; }
+    .btn-white { background: white; color: #1E3A8A; padding: 12px 28px; border-radius: 4px; font-weight: 700; font-family: var(--font-display); display: inline-block; transition: 0.2s; }
+    .btn-white:hover { background: #F0F4F8; transform: translateY(-2px); text-decoration: none; }
+
+    @media (max-width: 600px) { .nav-minimal { padding: 16px 20px; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-minimal">
+    <a href="index.html" class="nav-link">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Back to Ocide Coders
+    </a>
+  </nav>
+
+  <div class="container">
+    <div class="blog-header">
+      <h1>How to Build a Free Website Using AI (Step-by-Step)</h1>
+      <div class="meta">
+        <span>By Ocide Coders</span>
+        <span>•</span>
+        <span>5 min read</span>
+        <span>•</span>
+        <span>Tutorial</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>Building a website used to take weeks of coding or hundreds of dollars for a developer. Today, with the power of AI, you can generate a stunning website in minutes for <strong>completely free</strong>. In this guide, we will show you exactly how to do it.</p>
+
+      <h2>Step 1: Get the AI Prompt</h2>
+      <p>To get a high-quality result, you need to give the AI specific instructions. We have crafted a "Master Prompt" for you. Copy this prompt and paste it into ChatGPT, Claude, or any AI tool.</p>
+
+      <div class="prompt-box">
+        <div class="prompt-header">
+          <span>master-prompt.txt</span>
+          <button class="btn-copy" onclick="copyPrompt()">Copy Prompt</button>
+        </div>
+        <div class="prompt-content" id="promptText">Act as an expert web developer. Create a modern, fully responsive single-page portfolio website using pure HTML, CSS, and JavaScript.
+        
+Include:
+- A hero section with my name and title.
+- A projects section with 3 cards.
+- A contact section.
+- Smooth scrolling and modern animations.
+
+Output the complete code in three separate blocks: HTML, CSS, and JS. Do not use any external libraries like React or Tailwind, use pure CSS.</div>
+      </div>
+
+      <h2>Step 2: Generate the Code</h2>
+      <p>Once you paste the prompt, replace "my name" and "title" with your actual details. The AI will generate three blocks of code: <strong>index.html</strong>, <strong>style.css</strong>, and <strong>script.js</strong>. Save these blocks into text files on your computer.</p>
+
+      <h2>Step 3: Host it Online for Free</h2>
+      <p>Now that you have the code, you need to put it on the internet. The easiest and fastest way is using <strong>Netlify</strong>:</p>
+      <ol>
+        <li>Go to <a href="https://app.netlify.com/drop" target="_blank">Netlify Drop</a>.</li>
+        <li>Put your HTML, CSS, and JS files into a single folder on your computer.</li>
+        <li>Drag and drop that folder into the Netlify Drop page.</li>
+        <li>Boom! Your website is live on the internet with a free URL.</li>
+      </ol>
+      <p>If you want a custom domain (like yourname.com), you can buy one and connect it to Netlify easily.</p>
+
+      <!-- CTA Section -->
+      <div class="cta-banner">
+        <h3>Don't want to do it yourself?</h3>
+        <p>Let the experts at Ocide Coders build a professional, single-page portfolio for you — completely free via our community program.</p>
+        <a href="free-website.html" class="btn-white">Get a Free Website</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function copyPrompt() {
+      const text = document.getElementById('promptText').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.btn-copy');
+        btn.innerText = 'Copied!';
+        btn.style.background = '#10B981';
+        setTimeout(() => {
+          btn.innerText = 'Copy Prompt';
+          btn.style.background = '#3B82F6';
+        }, 2000);
+      });
+    }
+  </script>
+
+  <!-- Hidden SEO Internal Links -->
+  <div style="font-size: 0.65rem; opacity: 0.25; text-align: center; padding: 20px; border-top: 1px solid var(--line); margin-top: 40px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-family: sans-serif;">
+    <a href="index.html" style="color: inherit; text-decoration: none;">Home</a>
+    <a href="ocide-about.html" style="color: inherit; text-decoration: none;">About Ocide Coders</a>
+    <a href="aboutmustafa.html" style="color: inherit; text-decoration: none;">About Abdullah Al Mustafa</a>
+    <a href="free-website.html" style="color: inherit; text-decoration: none;">Get a Free Website</a>
+    <a href="https://abdullahalmustafa.onrender.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Abdullah Al Mustafa</a>
+  </div>
+
+</body>
+</html>
