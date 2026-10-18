@@ -279,26 +279,50 @@
     <div class="contact-wrapper reveal">
       <div class="contact-info">
         <p>Ready to build something great? Send us a message and we'll get back to you.</p>
-        <a href="mailto:ocidecoders@proton.me" class="email-link">ocidecoders@proton.me</a>
+        <a href="mailto:ocidecoders@proton.me" class="email-link">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          ocidecoders@proton.me
+        </a>
       </div>
+
       <form id="contact-form" class="contact-form" novalidate>
+        
         <div class="form-row">
           <label for="cf-subject" class="form-label">Subject</label>
-          <input type="text" id="cf-subject" class="form-input" placeholder="Project Inquiry, Collaboration..." required>
+          <div class="input-wrap">
+            <svg class="input-icon" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+            <input type="text" id="cf-subject" class="form-input" placeholder="Project Inquiry, Collaboration..." required>
+          </div>
         </div>
+
         <div class="form-row">
           <label for="cf-name" class="form-label">Your Name</label>
-          <input type="text" id="cf-name" class="form-input" placeholder="John Doe" required>
+          <div class="input-wrap">
+            <svg class="input-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <input type="text" id="cf-name" class="form-input" placeholder="John Doe" required>
+          </div>
         </div>
+
         <div class="form-row">
           <label for="cf-email" class="form-label">Your Email</label>
-          <input type="email" id="cf-email" class="form-input" placeholder="john@example.com" required>
+          <div class="input-wrap">
+            <svg class="input-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <input type="email" id="cf-email" class="form-input" placeholder="john@example.com" required>
+          </div>
         </div>
+
         <div class="form-row">
           <label for="cf-message" class="form-label">Message</label>
-          <textarea id="cf-message" class="form-input" rows="4" placeholder="Tell us about your project..." required></textarea>
+          <div class="input-wrap">
+            <svg class="input-icon" viewBox="0 0 24 24" style="top: 16px; transform: none;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <textarea id="cf-message" class="form-input form-textarea" rows="4" placeholder="Tell us about your project..." required></textarea>
+          </div>
         </div>
-        <button type="submit" class="btn-primary">Send Message →</button>
+
+        <button type="submit" class="btn-primary" style="display: inline-flex; justify-content: center; align-items: center; gap: 10px;">
+          Send Message
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
       </form>
     </div>
   </section>

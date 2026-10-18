@@ -293,3 +293,59 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     margin: -5px 0 -5px 20px;
   }
 }
+
+/* =========================================
+   CONTACT FORM SVG ICONS
+   ========================================= */
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  stroke: var(--text-muted);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+  transition: stroke 0.3s var(--ease);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Add padding to inputs so text doesn't overlap icons */
+.input-wrap .form-input {
+  padding-left: 48px !important;
+}
+
+/* Highlight icon when input is focused */
+.input-wrap:focus-within .input-icon {
+  stroke: var(--blue);
+}
+
+/* Error state for icon */
+.input-wrap .form-input.field-error + .input-icon,
+.input-wrap:has(.field-error) .input-icon {
+  stroke: #EF4444;
+}
+
+/* Adjust email link icon */
+.email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.email-link .icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
