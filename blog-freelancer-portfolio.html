@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Why Every Freelancer Needs a Portfolio Website in 2026</title>
   <meta name="description" content="Discover why a custom portfolio website is the secret to getting high-paying clients on Upwork and Fiverr. Don't rely solely on social media.">
   <meta name="keywords" content="freelancer portfolio website, how to get freelance clients, fiverr vs website, why freelancers need a website, professional portfolio">
@@ -10,6 +10,7 @@
   <meta name="theme-color" content="#F9F8F6">
 
   <link rel="canonical" href="https://ocidecoders.onrender.com/blog-freelancer-portfolio.html">
+  
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -21,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* UNIFIED LIGHT THEME */
+    /* UNIFIED EDITORIAL THEME */
     :root {
       --bg: #F9F8F6; --surface: #FFFFFF; --text: #0A0A0A;
       --text-muted: #555555; --line: #E5E3DC;
@@ -29,7 +30,7 @@
       --font-display: 'Archivo', sans-serif; --font-body: 'Inter', sans-serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body { background-color: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; -webkit-font-smoothing: antialiased; -webkit-user-select: none; user-select: none; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
@@ -37,34 +38,31 @@
 
     /* Navbar */
     .nav-minimal { padding: 20px 40px; border-bottom: 1px solid var(--line); background: var(--surface); display: flex; align-items: center; }
-    .nav-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--text); }
+    .nav-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--text); transition: color 0.2s; }
     .nav-link:hover { color: var(--accent); text-decoration: none; }
     
-    /* Blog Container */
+    /* Layout */
     .container { max-width: 800px; margin: 60px auto; padding: 0 20px; }
-    
-    /* Header */
-    .blog-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 2px solid var(--text); }
-    .blog-header h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .page-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 2px solid var(--text); }
+    .page-header h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; }
     .meta { display: flex; gap: 16px; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
-    
+
     /* Content */
     .content p { font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 24px; }
     .content h2 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; margin: 40px 0 16px; color: var(--text); }
     .content strong { color: var(--text); }
+    .content ul { margin: 0 0 24px 24px; color: var(--text-muted); font-size: 1.05rem; }
+    .content li { margin-bottom: 10px; }
 
     /* Highlight Box */
-    .highlight-box {
-      background: #FFF3F0; border-left: 4px solid var(--accent);
-      padding: 24px; margin: 30px 0; border-radius: 0 8px 8px 0;
-    }
-    .highlight-box p { color: var(--text); margin-bottom: 0; font-weight: 500; font-size: 1.1rem; }
+    .highlight-box { background: #FFF3F0; border-left: 4px solid var(--accent); padding: 24px; margin: 30px 0; border-radius: 0 8px 8px 0; }
+    .highlight-box p { color: var(--text); margin-bottom: 0; font-weight: 500; font-size: 1.15rem; font-style: italic; }
 
     /* CTA Banner */
-    .cta-banner { background: #0A0A0A; border-radius: 12px; padding: 40px; text-align: center; color: white; margin: 50px 0; }
+    .cta-banner { background: var(--text); border-radius: 12px; padding: 40px; text-align: center; color: white; margin: 50px 0; }
     .cta-banner h3 { font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 16px; color: white; }
     .cta-banner p { color: rgba(255,255,255,0.8); margin-bottom: 24px; font-size: 1.05rem; }
-    .btn-primary { background: var(--accent); color: white; padding: 14px 32px; border-radius: 4px; font-weight: 600; font-family: var(--font-display); display: inline-block; transition: 0.2s; }
+    .btn-primary { background: var(--accent); color: white; padding: 14px 32px; border-radius: 4px; font-weight: 700; font-family: var(--font-display); display: inline-flex; align-items: center; gap: 8px; transition: 0.2s; }
     .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); text-decoration: none; }
 
     @media (max-width: 600px) { .nav-minimal { padding: 16px 20px; } .cta-banner { padding: 30px 20px; } }
@@ -80,7 +78,7 @@
   </nav>
 
   <div class="container">
-    <div class="blog-header">
+    <div class="page-header">
       <h1>Why Every Freelancer Needs a Portfolio Website in 2026</h1>
       <div class="meta">
         <span>By Ocide Coders</span>
@@ -97,7 +95,7 @@
       <p>The answer is no. The top 1% of freelancers in the world have something in common: <strong>they own their digital real estate.</strong></p>
 
       <div class="highlight-box">
-        <p>When you rely only on Fiverr or social media, you are a tenant. When you have your own website, you are the landlord.</p>
+        <p>"When you rely only on Fiverr or social media, you are a tenant. When you have your own website, you are the landlord."</p>
       </div>
 
       <h2>1. You Look 10x More Professional</h2>
@@ -118,7 +116,10 @@
       <div class="cta-banner">
         <h3>Get Your Portfolio Built Today.</h3>
         <p>Whether you are a writer, coder, or designer — we will build a modern single-page portfolio for you. Choose the path that fits your budget.</p>
-        <a href="free-website.html" class="btn-primary" style="margin-bottom: 12px;">Get a Free Website</a>
+        <a href="free-website.html" class="btn-primary" style="margin-bottom: 12px;">
+          <svg class="icon" viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
+          Get a Free Website
+        </a>
         <br>
         <a href="index.html#pricing" style="color: white; font-size: 0.9rem; text-decoration: underline;">Or start from just $6</a>
       </div>
@@ -126,30 +127,38 @@
     </div>
   </div>
 
-  
-  <!-- Hidden SEO Internal Links -->
-  <div style="font-size: 0.65rem; opacity: 0.25; text-align: center; padding: 20px; border-top: 1px solid rgba(0,0,0,0.1); margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 10px; font-family: sans-serif; color: #000; position: relative; z-index: 10;">
-    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; max-width: 800px;">
-      <a href="index.html" style="color: inherit; text-decoration: none;">Home</a>
-      <a href="ocide-about.html" style="color: inherit; text-decoration: none;">About Ocide</a>
-      <a href="aboutmustafa.html" style="color: inherit; text-decoration: none;">About Mustafa</a>
-      <a href="free-website.html" style="color: inherit; text-decoration: none;">Free Website</a>
-      <a href="meeel.html" style="color: inherit; text-decoration: none;">meeEL</a>
-      <a href="eliget.html" style="color: inherit; text-decoration: none;">Eliget</a>
-      <a href="earn-money-online.html" style="color: inherit; text-decoration: none;">Earn Money</a>
-      <a href="blog-freelancer-portfolio.html" style="color: inherit; text-decoration: none;">Freelancer Guide</a>
-      <a href="network.html" style="color: inherit; text-decoration: none;">Network</a>
-      <a href="templates.html" style="color: inherit; text-decoration: none;">Templates</a>
-      <a href="icons.html" style="color: inherit; text-decoration: none;">Icon Pack</a>
-      <a href="blog-free-ai-website.html" style="color: inherit; text-decoration: none;">AI Guide</a>
-      <a href="blog-truth-about-free-websites.html" style="color: inherit; text-decoration: none;">Truth About Free</a>
-      <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy</a>
-      <a href="terms.html" style="color: inherit; text-decoration: none;">Terms</a>
-      <a href="faq.html" style="color: inherit; text-decoration: none;">FAQ</a>
-      <a href="sitemap.html" style="color: inherit; text-decoration: none;">Sitemap</a>
-      <a href="https://abdullahalmustafa.onrender.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; font-weight: 600;">Abdullah Al Mustafa ↗</a>
+  <!-- UNIFIED FOOTER -->
+  <footer class="footer" style="margin-top: 60px; padding: 30px 40px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; background: var(--surface);">
+    <p style="font-family: var(--font-display); font-size: 0.85rem; color: var(--text-muted);">© 2026 Ocide Coders</p>
+    <div style="display: flex; gap: 16px;">
+      <a href="https://youtube.com/@ocidecoders?si=P3a88e_AIgHM_LW6" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+      <a href="https://www.instagram.com/coders_ocide?obrf=Zmp6MmhpcXF6enR2" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=61595433153310" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="https://vm.tiktok.com/ZS9UuFXeQhahh-uFpKS/" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 15.68a6.34 6.34 0 0 0 6.34 6.32 6.34 6.34 0 0 0 6.33-6.32v-5a8.16 8.16 0 0 0 4.92 1.63v-3.5a8.23 8.23 0 0 1-3-1.12z"/></svg></a>
+      <a href="https://github.com/ocidecoders/" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
     </div>
-    <div>© 2026 Ocide Coders</div>
+  </footer>
+
+  <!-- Hidden SEO Links -->
+  <div style="font-size: 0.65rem; opacity: 0.15; text-align: center; padding: 15px 20px; border-top: 1px solid var(--line); display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; font-family: sans-serif; color: #000; background: var(--bg);">
+    <a href="index.html" style="color: inherit; text-decoration: none;">Home</a>
+    <a href="ocide-about.html" style="color: inherit; text-decoration: none;">About Ocide</a>
+    <a href="aboutmustafa.html" style="color: inherit; text-decoration: none;">About Mustafa</a>
+    <a href="free-website.html" style="color: inherit; text-decoration: none;">Free Website</a>
+    <a href="meeel.html" style="color: inherit; text-decoration: none;">meeEL</a>
+    <a href="eliget.html" style="color: inherit; text-decoration: none;">Eliget</a>
+    <a href="earn-money-online.html" style="color: inherit; text-decoration: none;">Earn Money</a>
+    <a href="blog-freelancer-portfolio.html" style="color: inherit; text-decoration: none;">Freelancer</a>
+    <a href="network.html" style="color: inherit; text-decoration: none;">Network</a>
+    <a href="templates.html" style="color: inherit; text-decoration: none;">Templates</a>
+    <a href="icons.html" style="color: inherit; text-decoration: none;">Icons</a>
+    <a href="blog-free-ai-website.html" style="color: inherit; text-decoration: none;">AI Guide</a>
+    <a href="blog-truth-about-free-websites.html" style="color: inherit; text-decoration: none;">Truth</a>
+    <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy</a>
+    <a href="terms.html" style="color: inherit; text-decoration: none;">Terms</a>
+    <a href="faq.html" style="color: inherit; text-decoration: none;">FAQ</a>
+    <a href="sitemap.html" style="color: inherit; text-decoration: none;">Sitemap</a>
+    <a href="https://abdullahalmustafa.onrender.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Abdullah Al Mustafa</a>
   </div>
 
 </body>
