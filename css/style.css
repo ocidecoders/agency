@@ -1,8 +1,8 @@
 :root {
-  --bg: #050B14;
-  --surface: #0D1526;
-  --surface-hover: #152035;
-  --border: #1F2C44;
+  --bg: #000000;
+  --surface: #0A0A0A;
+  --surface-hover: #171717;
+  --border: #262626;
   
   --text: #F0F4F8;
   --text-muted: #94A3B8;
