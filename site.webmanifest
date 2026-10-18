@@ -1,0 +1,21 @@
+{
+  "name": "Ocide Coders",
+  "short_name": "Ocide",
+  "description": "Premium web development agency building fast, modern, SEO-optimized websites.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050B14",
+  "theme_color": "#050B14",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
