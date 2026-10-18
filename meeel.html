@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>meeEL — The Natural Language Web Builder | by Ocide Coders</title>
+  <meta name="description" content="meeEL is a 5-in-1 English-to-code transpiler. Stop learning syntax and start giving commands. Build web pages using simple English.">
+  <meta name="keywords" content="meeEL, easy coding language, English to code, natural language programming, no-code builder, Ocide Coders meeEL, web development for beginners">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0047FF">
+
+  <link rel="canonical" href="https://ocidecoders.onrender.com/meeel.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- SoftwareApplication Schema for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "meeEL",
+    "operatingSystem": "Web",
+    "applicationCategory": "DeveloperApplication",
+    "description": "A natural language web builder that converts simple English commands into HTML, CSS, and JS.",
+    "author": {
+      "@type": "Organization",
+      "name": "Ocide Coders",
+      "url": "https://ocidecoders.onrender.com/"
+    }
+  }
+  </script>
+
+  <style>
+    /* =========================================
+       THEME: MEEEL (Bright Blue & Tech Dark)
+       ========================================= */
+    :root {
+      --bg: #0A0A0A;
+      --surface: #121212;
+      --text: #FFFFFF;
+      --text-muted: #A0A0A0;
+      --line: #262626;
+      --accent: #0047FF; /* meeEL Blue */
+      --accent-hover: #0035C4;
+      --font-display: 'Archivo', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'Fira Code', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* SVG Icon Helpers */
+    .icon { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+    /* Navbar */
+    .nav-minimal { padding: 20px 40px; border-bottom: 1px solid var(--line); background: var(--surface); display: flex; align-items: center; }
+    .nav-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text); }
+    .nav-link:hover { color: var(--accent); text-decoration: none; }
+    
+    /* Layout */
+    .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+    
+    /* Header */
+    .page-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 2px solid var(--text); }
+    .page-header h1 { font-family: var(--font-display); font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; line-height: 1; letter-spacing: -0.04em; margin-bottom: 12px; color: var(--accent); }
+    .subtitle { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); }
+    .subtitle::before { content: ""; display: block; width: 30px; height: 2px; background: var(--accent); }
+
+    /* Infobox */
+    .infobox { float: right; width: 340px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; margin: 0 0 30px 40px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+    .infobox-header { display: flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+    .info-row { display: flex; margin-bottom: 14px; font-size: 0.9rem; align-items: flex-start; }
+    .info-icon { width: 24px; height: 24px; color: var(--accent); margin-right: 12px; margin-top: 2px; }
+    .info-text { display: flex; flex-direction: column; }
+    .info-label { font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text); margin-bottom: 2px; }
+    .info-value { color: var(--text-muted); line-height: 1.4; }
+    
+    /* Content */
+    .content h2 { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--line); letter-spacing: -0.01em; }
+    .content h2 .icon { color: var(--accent); width: 22px; height: 22px; }
+    .content p { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 18px; }
+    .content strong { color: var(--text); font-weight: 600; }
+    
+    /* Code Block */
+    .code-block { background: #000; border: 1px solid var(--line); border-radius: 8px; padding: 20px; margin: 24px 0; font-family: var(--font-mono); font-size: 0.95rem; color: #A0A0A0; }
+    .code-block span.keyword { color: #FF79C6; }
+    .code-block span.string { color: #F1FA8C; }
+    .code-block span.comment { color: #6272A4; }
+
+    /* Buttons */
+    .button-group { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 4px; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; transition: all 0.2s; }
+    .btn-primary { background: var(--accent); color: #FFF; border: 1px solid var(--accent); }
+    .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); text-decoration: none; transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--line); }
+    .btn-outline:hover { border-color: var(--text); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .infobox { float: none; width: 100%; margin: 0 0 30px 0; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-minimal">
+    <a href="index.html" class="nav-link">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Back to Ocide Coders
+    </a>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>meeEL</h1>
+      <div class="subtitle">The Natural Language Web Builder · 5-in-1 Engine</div>
+    </div>
+
+    <!-- Quick Facts Infobox -->
+    <div class="infobox">
+      <div class="infobox-header">
+        <svg class="icon" viewBox="0 0 24 24" style="color: var(--accent)"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        Product Details
+      </div>
+      
+      <div class="info-row">
+        <svg class="icon info-icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        <div class="info-text"><span class="info-label">Type</span><span class="info-value">Web Builder / Transpiler</span></div>
+      </div>
+      <div class="info-row">
+        <svg class="icon info-icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        <div class="info-text"><span class="info-label">Core Engine</span><span class="info-value">5-in-1 Language</span></div>
+      </div>
+      <div class="info-row">
+        <svg class="icon info-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <div class="info-text"><span class="info-label">Creator</span><span class="info-value"><a href="aboutmustafa.html">Abdullah Al Mustafa</a></span></div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <p>As a child, <strong>Abdullah Al Mustafa</strong> asked a simple question: <em>"We build advanced machines, but why haven't we made coding languages easier?"</em></p>
+      <p>Since he couldn't build a whole new programming language from scratch, he built <strong>meeEL</strong>. What started as a simple alternative for HTML and CSS has now evolved into a powerful <strong>5-in-1 language engine</strong>.</p>
+
+      <h2><svg class="icon" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg> You Don't Need to be a Coder</h2>
+      <p>This is not an app for professional developers. This is for people who are <strong>not coders, but want to build</strong>. With meeEL, you don't have to learn complex syntax. You are the commander.</p>
+      
+      <p>You just give commands in plain English, and the engine does the magic. For example, if you write:</p>
+
+      <div class="code-block">
+<span class="comment"># 1. Create a new page</span>
+<span class="keyword">create</span> a page
+
+<span class="comment"># 2. Set the name of that page</span>
+<span class="keyword">set</span> page name <span class="keyword">to</span> <span class="string">"Home"</span>
+      </div>
+
+      <p>Just like that, the engine sets the page name to "Home" behind the scenes. You don't write the code—you give the order.</p>
+
+      <h2><svg class="icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Code by Commanding, Not Typing</h2>
+      <p>meeEL understands your intent. It acts as a transpiler that reads your English instructions and instantly generates the underlying HTML, CSS, and JavaScript required to make it work.</p>
+      <p>It removes the barrier to entry. If you have the vision, meeEL gives you the power to execute it.</p>
+
+      <!-- Action Buttons -->
+      <div class="button-group">
+        <a href="https://meeel-page.onrender.com/" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          Try meeEL Now
+        </a>
+        <a href="index.html#works" class="btn btn-outline">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          See More Projects
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden SEO Internal Links -->
+  <div style="font-size: 0.65rem; opacity: 0.25; text-align: center; padding: 20px; border-top: 1px solid var(--line); margin-top: 40px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-family: sans-serif;">
+    <a href="index.html" style="color: inherit; text-decoration: none;">Home</a>
+    <a href="ocide-about.html" style="color: inherit; text-decoration: none;">About Ocide Coders</a>
+    <a href="aboutmustafa.html" style="color: inherit; text-decoration: none;">About Abdullah Al Mustafa</a>
+    <a href="free-website.html" style="color: inherit; text-decoration: none;">Get a Free Website</a>
+    <a href="blog-free-ai-website.html" style="color: inherit; text-decoration: none;">AI Website Guide</a>
+    <a href="blog-truth-about-free-websites.html" style="color: inherit; text-decoration: none;">Truth About Free Sites</a>
+  </div>
+
+</body>
+</html>
