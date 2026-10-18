@@ -2,60 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Sitemap — Ocide Coders</title>
   <meta name="description" content="Visual directory of all pages on Ocide Coders. Find our services, free resources, products, and blogs.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#F9F8F6">
+  
   <link rel="canonical" href="https://ocidecoders.onrender.com/sitemap.html">
+  
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
+    /* UNIFIED LIGHT THEME */
     :root { --bg: #F9F8F6; --surface: #FFFFFF; --text: #0A0A0A; --text-muted: #555555; --line: #E5E3DC; --accent: #FF3B1F; --font-display: 'Archivo', sans-serif; --font-body: 'Inter', sans-serif; }
+    
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    
+    /* Disable text selection */
+    body { 
+      background-color: var(--bg); 
+      color: var(--text); 
+      font-family: var(--font-body); 
+      line-height: 1.6; 
+      -webkit-font-smoothing: antialiased; 
+      -webkit-user-select: none; 
+      user-select: none; 
+    }
+    
     a { color: inherit; text-decoration: none; }
+    
     .icon { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; flex-shrink: 0; }
+
+    /* Navbar */
     .nav-minimal { padding: 20px 40px; border-bottom: 1px solid var(--line); background: var(--surface); display: flex; align-items: center; }
     .nav-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--text); transition: color 0.2s; }
     .nav-link:hover { color: var(--accent); }
-    .container { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+    
+    /* Layout */
+    .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
     .page-header { margin-bottom: 50px; padding-bottom: 24px; border-bottom: 2px solid var(--text); }
     .page-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 12px; }
     .subtitle { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); }
     .subtitle::before { content: ""; display: block; width: 30px; height: 2px; background: var(--accent); }
-    .sitemap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .map-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); transition: transform 0.3s; }
+
+    /* Grid */
+    .sitemap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    
+    .map-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); transition: transform 0.3s, box-shadow 0.3s; }
     .map-card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+    
     .map-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
     .map-card-header .icon { width: 28px; height: 28px; color: var(--accent); }
     .map-card-header h2 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; text-transform: uppercase; }
+    
     .map-list { list-style: none; }
     .map-list li { margin-bottom: 12px; }
     .map-list a { display: inline-flex; align-items: center; gap: 8px; font-size: 1.05rem; color: var(--text-muted); transition: color 0.2s, transform 0.2s; }
     .map-list a::before { content: "→"; color: var(--accent); font-weight: bold; opacity: 0.5; transition: opacity 0.2s; }
     .map-list a:hover { color: var(--accent); transform: translateX(4px); }
     .map-list a:hover::before { opacity: 1; }
+
     @media (max-width: 600px) { .nav-minimal { padding: 16px 20px; } .sitemap-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
+
   <nav class="nav-minimal">
-    <a href="index.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>Back to Home</a>
+    <a href="index.html" class="nav-link">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Back to Home
+    </a>
   </nav>
+
   <div class="container">
     <div class="page-header">
       <h1>Sitemap</h1>
       <div class="subtitle">Visual Directory of Ocide Coders</div>
     </div>
+
     <div class="sitemap-grid">
       
+      <!-- Main Pages -->
       <div class="map-card">
         <div class="map-card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -69,6 +104,7 @@
         </ul>
       </div>
 
+      <!-- Products -->
       <div class="map-card">
         <div class="map-card-header">
           <svg class="icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
@@ -78,9 +114,11 @@
           <li><a href="meeel.html">meeEL (Web Builder)</a></li>
           <li><a href="eliget.html">Eliget (Social Network)</a></li>
           <li><a href="https://eliget.onrender.com/" target="_blank">Open Eliget App ↗</a></li>
+          <li><a href="https://meeel-page.onrender.com/" target="_blank">Try meeEL Engine ↗</a></li>
         </ul>
       </div>
 
+      <!-- About & Info -->
       <div class="map-card">
         <div class="map-card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
@@ -89,10 +127,12 @@
         <ul class="map-list">
           <li><a href="ocide-about.html">About Ocide Coders</a></li>
           <li><a href="aboutmustafa.html">About Abdullah Al Mustafa</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="faq.html">Frequently Asked Questions</a></li>
+          <li><a href="https://abdullahalmustafa.onrender.com/" target="_blank">Abdullah's Portfolio ↗</a></li>
         </ul>
       </div>
 
+      <!-- Free Resources -->
       <div class="map-card">
         <div class="map-card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
@@ -101,11 +141,12 @@
         <ul class="map-list">
           <li><a href="free-website.html">Get a Free Website</a></li>
           <li><a href="templates.html">Free HTML Templates</a></li>
-          <li><a href="icons.html">Icon Pack & Vectors</a></li>
+          <li><a href="icons.html">A to Z Icon Pack</a></li>
           <li><a href="earn-money-online.html">How to Earn Money Online</a></li>
         </ul>
       </div>
 
+      <!-- Blog & Insights -->
       <div class="map-card">
         <div class="map-card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z"></path></svg>
@@ -118,18 +159,55 @@
         </ul>
       </div>
 
+      <!-- Legal & System -->
       <div class="map-card">
         <div class="map-card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          <h2>Legal</h2>
+          <h2>Legal & System</h2>
         </div>
         <ul class="map-list">
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="sitemap.html">Sitemap (This Page)</a></li>
         </ul>
       </div>
 
     </div>
   </div>
+
+  <!-- UNIFIED FOOTER -->
+  <footer class="footer" style="margin-top: 60px; padding: 30px 40px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; background: var(--surface);">
+    <p style="font-family: var(--font-display); font-size: 0.85rem; color: var(--text-muted);">© 2026 Ocide Coders</p>
+    <div style="display: flex; gap: 16px;">
+      <a href="https://youtube.com/@ocidecoders?si=P3a88e_AIgHM_LW6" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+      <a href="https://www.instagram.com/coders_ocide?obrf=Zmp6MmhpcXF6enR2" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=61595433153310" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="https://vm.tiktok.com/ZS9UuFXeQhahh-uFpKS/" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 15.68a6.34 6.34 0 0 0 6.34 6.32 6.34 6.34 0 0 0 6.33-6.32v-5a8.16 8.16 0 0 0 4.92 1.63v-3.5a8.23 8.23 0 0 1-3-1.12z"/></svg></a>
+      <a href="https://github.com/ocidecoders/" target="_blank" rel="noopener" style="color: var(--text-muted);"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+    </div>
+  </footer>
+
+  <!-- Hidden SEO Links -->
+  <div style="font-size: 0.65rem; opacity: 0.15; text-align: center; padding: 15px 20px; border-top: 1px solid var(--line); display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; font-family: sans-serif; color: #000; background: var(--bg);">
+    <a href="index.html" style="color: inherit; text-decoration: none;">Home</a>
+    <a href="ocide-about.html" style="color: inherit; text-decoration: none;">About Ocide</a>
+    <a href="aboutmustafa.html" style="color: inherit; text-decoration: none;">About Mustafa</a>
+    <a href="free-website.html" style="color: inherit; text-decoration: none;">Free Website</a>
+    <a href="meeel.html" style="color: inherit; text-decoration: none;">meeEL</a>
+    <a href="eliget.html" style="color: inherit; text-decoration: none;">Eliget</a>
+    <a href="earn-money-online.html" style="color: inherit; text-decoration: none;">Earn Money</a>
+    <a href="blog-freelancer-portfolio.html" style="color: inherit; text-decoration: none;">Freelancer</a>
+    <a href="network.html" style="color: inherit; text-decoration: none;">Network</a>
+    <a href="templates.html" style="color: inherit; text-decoration: none;">Templates</a>
+    <a href="icons.html" style="color: inherit; text-decoration: none;">Icons</a>
+    <a href="blog-free-ai-website.html" style="color: inherit; text-decoration: none;">AI Guide</a>
+    <a href="blog-truth-about-free-websites.html" style="color: inherit; text-decoration: none;">Truth</a>
+    <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy</a>
+    <a href="terms.html" style="color: inherit; text-decoration: none;">Terms</a>
+    <a href="faq.html" style="color: inherit; text-decoration: none;">FAQ</a>
+    <a href="sitemap.html" style="color: inherit; text-decoration: none;">Sitemap</a>
+    <a href="https://abdullahalmustafa.onrender.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Abdullah Al Mustafa</a>
+  </div>
+
 </body>
 </html>
