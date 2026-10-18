@@ -57,3 +57,29 @@
     window.location.href = `mailto:ocidecoders@proton.me?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
   });
 })();
+
+// =========================================
+// SCROLL REVEAL ANIMATION SCRIPT
+// =========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const revealElements = document.querySelectorAll('.reveal');
+  
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add class to trigger CSS animation
+          entry.target.classList.add('active');
+          // Stop observing once animated
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -50px 0px', // Triggers a bit before it fully enters
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  }
+});
