@@ -349,3 +349,25 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   stroke-width: 2;
   fill: none;
 }
+
+/* =========================================
+   MOBILE RESPONSIVE & ZOOM FIX
+   ========================================= */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden !important; /* Prevents horizontal scrolling */
+  position: relative;
+}
+
+/* Ensure the blue glow doesn't break the page width */
+.hero-glow {
+  right: 0 !important;
+  transform: translateX(30%); /* Safely pushes it off-screen */
+  pointer-events: none;
+}
+
+/* Ensure no other element is wider than the screen */
+* {
+  max-width: 100%;
+}
