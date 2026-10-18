@@ -187,3 +187,33 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
   .footer { flex-direction: column; gap: 20px; text-align: center; }
 }
+
+/* Highlight founder name in about section */
+.about-text strong {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* Founder link style in about section */
+.founder-link {
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+}
+
+.founder-link:hover {
+  color: var(--blue-hover);
+  border-bottom-color: var(--blue-hover);
+}
+
+/* Adjust about text spacing */
+.about-text p {
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.about-text p strong {
+  color: var(--text);
+}
